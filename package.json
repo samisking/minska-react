@@ -1,0 +1,56 @@
+{
+  "name": "minska-react",
+  "version": "0.0.0",
+  "description": "React helpers for minska",
+  "main": "index.js",
+  "module": "index.es.js",
+  "jsnext:main": "index.es.js",
+  "browser": "index.browser.js",
+  "repository": "git@github.com:samisking/minska-react.git",
+  "author": "Sam King <mail@samking.co>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run clean",
+    "test": "jest",
+    "test:cov": "yarn run test -- --coverage",
+    "test:watch": "yarn run test -- --watch",
+    "clean": "rm -rf dist/* tests/coverage/*",
+    "prebuild": "yarn run lint && yarn run test",
+    "build": "node tools/build"
+  },
+  "dependencies": {
+    "minska": "^1.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "del": "^2.2.2",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.17.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "jest": "^19.0.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-test-renderer": "^15.4.2",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "jest": {
+    "coverageDirectory": "./tests/coverage",
+    "watchman": false
+  }
+}

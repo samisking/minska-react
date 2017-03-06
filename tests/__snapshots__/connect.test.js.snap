@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`connect passes correct props 1`] = `
+Object {
+  "foo": "baz",
+  "send": [Function],
+}
+`;
+
+exports[`connect renders correctly 1`] = `
+<div>
+  Foo is 
+  baz
+</div>
+`;
