@@ -1,15 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`connect passes correct props 1`] = `
-Object {
-  "foo": "baz",
-  "send": [Function],
-}
+exports[`connect() renders correctly with mapStateToProps() 1`] = `
+<_class
+  minska="ftw"
+>
+  <MyApp
+    foo="updated foo"
+    minska="ftw"
+    send={[Function]}
+  >
+    <div>
+      <p
+        className="render-count"
+      >
+        2
+      </p>
+      <p>
+        Foo: 
+        updated foo
+      </p>
+      <p>
+        Baz: 
+      </p>
+      <button
+        className="update-foo"
+        onClick={[Function]}
+      >
+        Update Foo
+      </button>
+      <button
+        className="update-baz"
+        onClick={[Function]}
+      >
+        Update Baz
+      </button>
+    </div>
+  </MyApp>
+</_class>
 `;
 
-exports[`connect renders correctly 1`] = `
-<div>
-  Foo is 
-  baz
-</div>
+exports[`connect() renders correctly with no mapStateToProps() 1`] = `
+<_class
+  minska="ftw"
+>
+  <MyApp
+    baz="wtf"
+    foo="updated foo"
+    minska="ftw"
+    send={[Function]}
+  >
+    <div>
+      <p
+        className="render-count"
+      >
+        2
+      </p>
+      <p>
+        Foo: 
+        updated foo
+      </p>
+      <p>
+        Baz: 
+        wtf
+      </p>
+      <button
+        className="update-foo"
+        onClick={[Function]}
+      >
+        Update Foo
+      </button>
+      <button
+        className="update-baz"
+        onClick={[Function]}
+      >
+        Update Baz
+      </button>
+    </div>
+  </MyApp>
+</_class>
 `;
+
+exports[`connect() throws an error when initialising without a store 1`] = `"Could not find 'store' in either the context or props of component 'connect(MyApp)'. Either wrap the root component in <Provider>, or explicitly pass 'store' as a prop to 'connect(MyApp)'."`;
