@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Provider /> renders correctly 1`] = `
+<Provider
+  store={
+    Store {
+      "effects": Object {},
+      "events": Array [
+        "onError",
+        "onAction",
+        "onChange",
+      ],
+      "onAction": [Function],
+      "onChange": [Function],
+      "onError": [Function],
+      "reducers": Object {
+        "updateBaz": [Function],
+        "updateFoo": [Function],
+      },
+      "subscriptions": Array [],
+      Symbol(state): Object {
+        "baz": "wtf",
+        "foo": "bar",
+      },
+    }
+  }
+>
+  <div />
+</Provider>
+`;
